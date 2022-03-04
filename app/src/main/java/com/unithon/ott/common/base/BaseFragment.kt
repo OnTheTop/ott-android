@@ -9,6 +9,7 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import com.unithon.ott.presentation.ui.dialog.LoadingDialog
 
 abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val layoutResId: Int) :
     Fragment() {
@@ -29,4 +30,9 @@ abstract class BaseFragment<T : ViewDataBinding>(@LayoutRes private val layoutRe
 
     protected fun showToast(message: String) =
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+
+    protected fun showLoading(){
+        val loadingDialog = LoadingDialog()
+        loadingDialog.show(parentFragmentManager, "LoadingDialog")
+    }
 }

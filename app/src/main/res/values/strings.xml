@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">ott</string>
-    <string name="shared_pref_key">Ott_DB</string>
+    <string name="shared_pref_key">OTT_DB</string>
+    <string name="loading_dialog_message">잠시만 기다려주세요</string>
 </resources>
