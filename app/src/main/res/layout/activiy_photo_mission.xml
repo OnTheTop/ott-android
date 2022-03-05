@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -23,7 +24,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <include
             android:id="@+id/photo_mission_appbar"
@@ -37,41 +39,90 @@
             android:id="@+id/sv_photo_mission"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
             app:layout_constraintBottom_toTopOf="@id/btn_photo_mission_ok"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/photo_mission_appbar"
-            android:clipToPadding="false"
-            android:overScrollMode="never">
+            app:layout_constraintTop_toBottomOf="@+id/photo_mission_appbar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@color/background">
+
+                <ImageView
+                    android:id="@+id/iv_mission_bubble"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mission_bubble"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                android:id="@+id/tv_photo_mission_guide"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/photo_mission_tv_guide"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                    style="@style/font_Heading5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:paddingVertical="3dp"
+                    android:text="03.24 (화)"
+                    android:textColor="@color/mono10"
+                    app:layout_constraintStart_toStartOf="@id/iv_mission_bubble"
+                    app:layout_constraintTop_toTopOf="@id/iv_mission_bubble" />
+
+
+                <TextView
+                    android:id="@+id/tv_photo_mission_guide1"
+                    style="@style/font_Heading5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/photo_mission_tv_guide"
+                    android:textColor="@color/main_pink"
+                    app:layout_constraintBottom_toTopOf="@id/tv_photo_mission_guide2"
+                    app:layout_constraintEnd_toEndOf="@id/iv_mission_bubble"
+                    app:layout_constraintStart_toStartOf="@id/iv_mission_bubble"
+                    app:layout_constraintTop_toTopOf="@id/iv_mission_bubble"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tv_photo_mission_guide2"
+                    style="@style/font_Heading6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="@string/photo_mission_tv_guide2"
+                    android:textColor="@color/mono2"
+                    app:layout_constraintEnd_toEndOf="@id/iv_mission_bubble"
+                    app:layout_constraintStart_toStartOf="@id/iv_mission_bubble"
+                    app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_guide1"
+                    app:layout_constraintVertical_chainStyle="packed" />
 
                 <TextView
                     android:id="@+id/tv_photo_mission_past"
+                    style="@style/font_Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="35dp"
+                    android:background="@color/mono1"
+                    android:paddingHorizontal="9dp"
+                    android:paddingVertical="5dp"
                     android:text="@string/photo_mission_tv_past"
-                    app:layout_constraintStart_toStartOf="@id/tv_photo_mission_guide"
-                    app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_guide" />
+                    android:textColor="@color/mono10"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_mission_bubble" />
 
                 <ImageView
                     android:id="@+id/iv_photo_mission_past"
                     android:layout_width="220dp"
                     android:layout_height="220dp"
+                    android:layout_marginTop="20dp"
                     android:onClick="@{() -> photoActivity.openGalleryListener(photoType.PAST)}"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/ic_upload_image"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -79,9 +130,16 @@
 
                 <TextView
                     android:id="@+id/tv_photo_mission_recent"
+                    style="@style/font_Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/mono1"
+                    android:paddingHorizontal="9dp"
+                    android:paddingVertical="5dp"
                     android:text="@string/photo_mission_tv_recent"
+                    android:textColor="@color/mono10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_past" />
 
@@ -89,9 +147,10 @@
                     android:id="@+id/iv_photo_mission_recent"
                     android:layout_width="220dp"
                     android:layout_height="220dp"
+                    android:layout_marginTop="20dp"
                     android:onClick="@{() -> photoActivity.openGalleryListener(photoType.RECENT)}"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_launcher_foreground"
+                    android:src="@drawable/ic_upload_image"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_photo_mission_recent" />
@@ -99,18 +158,38 @@
 
                 <TextView
                     android:id="@+id/tv_photo_mission_comment"
+                    style="@style/font_Heading6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="32dp"
+                    android:background="@color/mono1"
+                    android:paddingHorizontal="9dp"
+                    android:paddingVertical="5dp"
                     android:text="@string/photo_mission_comment"
+                    android:textColor="@color/mono10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_recent" />
 
                 <EditText
                     android:id="@+id/et_photo_mission_comment"
+                    style="@style/font_small"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="85dp"
+                    android:layout_marginHorizontal="26dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="60dp"
                     android:autofillHints="false"
-                    android:inputType=""
+                    android:background="@drawable/bg_photo_comment"
+                    android:gravity="top"
+                    android:hint="@string/photo_mission_et_comment_hint"
+                    android:inputType="textMultiLine"
+                    android:maxLength="40"
+                    android:paddingHorizontal="11dp"
+                    android:paddingVertical="12dp"
+                    android:textColor="@color/mono10"
+                    android:textColorHint="@color/light_blue"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_comment" />
@@ -120,15 +199,18 @@
 
         </ScrollView>
 
-
         <Button
             android:id="@+id/btn_photo_mission_ok"
+            style="@style/font_Heading6"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
+            android:background="@color/mono1"
             android:text="@string/btn_registration"
+            android:textColor="@color/mono10"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sv_photo_mission" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
