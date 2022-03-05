@@ -83,7 +83,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/start_fourth_tv_family_description"
-            tools:text="A030381" />
+            tools:text="@{viewModel.familyCode}" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/start_fourth_btn_copy"

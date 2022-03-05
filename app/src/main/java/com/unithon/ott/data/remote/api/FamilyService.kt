@@ -1,5 +1,6 @@
 package com.unithon.ott.data.remote.api
 
+import com.unithon.ott.data.model.FamilyModel
 import com.unithon.ott.data.remote.response.FamilyMemberResponse
 import com.unithon.ott.data.remote.response.FamilyResponse
 import retrofit2.Response
@@ -11,8 +12,7 @@ interface FamilyService {
 
     @POST("/family")
     suspend fun postFamily(
-        @Body familyNickname : String,
-        @Body memberNickname : String
+        @Body familyModel : FamilyModel
     ) : Response<FamilyResponse>
 
     @POST("/family/{familyCode}")

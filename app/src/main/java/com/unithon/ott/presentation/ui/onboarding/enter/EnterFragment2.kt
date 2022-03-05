@@ -27,17 +27,10 @@ class EnterFragment2 : BaseFragment<FragmentEnterSecondBinding>(R.layout.fragmen
         super.onViewCreated(view, savedInstanceState)
 
         initBinding()
-        initListener()
     }
 
     private fun initBinding() {
         binding.enterSecondFragment = this
         binding.viewModel = startViewModel
-
-    }
-
-    private fun initListener() {
-        binding.enterSecondBtnComplete.setOnClickListener {
-        }
     }
 }

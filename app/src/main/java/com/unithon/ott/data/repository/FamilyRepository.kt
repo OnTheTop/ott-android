@@ -1,5 +1,6 @@
 package com.unithon.ott.data.repository
 
+import com.unithon.ott.data.model.FamilyModel
 import com.unithon.ott.data.remote.datasource.FamilyDatasource
 import com.unithon.ott.data.remote.response.FamilyMemberResponse
 import com.unithon.ott.data.remote.response.FamilyResponse
@@ -10,10 +11,9 @@ class FamilyRepositoryImpl: FamilyRepository  {
     private val familyDatasource : FamilyDatasource get() = FamilyDatasource()
 
     override suspend fun postFamily(
-        familyNickName: String,
-        memberNickname: String,
+        familyModel : FamilyModel
     ): Response<FamilyResponse> {
-        return familyDatasource.postFamily(familyNickName,memberNickname)
+        return familyDatasource.postFamily(familyModel)
     }
 
     override suspend fun postFamilyMember(
