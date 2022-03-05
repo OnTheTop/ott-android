@@ -38,6 +38,9 @@ class HistoryActivity : BaseActivity<ActivityHistoryBinding>(R.layout.activity_h
                     else historyDl.openDrawer(historyLlDrawer)
                 }
             }
+
+            historyBtnClose.setOnClickListener { onBackPressed() }
+
             historyVp.apply {
                 offscreenPageLimit = 2
                 adapter = HistoryTabAdapter(this@HistoryActivity)
