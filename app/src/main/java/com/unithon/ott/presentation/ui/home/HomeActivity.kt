@@ -12,6 +12,7 @@ import com.unithon.ott.common.base.BaseActivity
 import com.unithon.ott.databinding.ActivityHomeBinding
 import com.unithon.ott.presentation.ui.album.AlbumActivity
 import com.unithon.ott.presentation.ui.history.HistoryActivity
+import com.unithon.ott.presentation.ui.question.QuestionActivity
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
