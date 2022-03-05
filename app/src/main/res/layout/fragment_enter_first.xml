@@ -15,7 +15,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <include
+            android:id="@+id/enter_appbar"
+            layout="@layout/appbar"/>
 
         <TextView
             android:id="@+id/enter_first_tv_title"
@@ -24,6 +29,8 @@
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="136dp"
             android:text="@string/onboarding_tv_enter_code"
+            android:textColor="@color/white"
+            style="@style/font_Heading6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -36,6 +43,10 @@
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="15dp"
             android:gravity="center"
+            android:background="@drawable/bg_onboarding_btn_white"
+            style="@style/font_Heading6"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_blue"
             android:hint="@string/onboarding_edt_hint_code"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +58,9 @@
             android:layout_height="56dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="17dp"
+            android:background="@drawable/bg_onboarding_btn_black"
+            style="@style/font_Heading6"
+            android:textColor="@color/white"
             android:text="@string/onboarding_btn_next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

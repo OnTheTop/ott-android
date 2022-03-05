@@ -4,23 +4,34 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/bg_et_nickname.xml" value="0.167" />
+        <entry key="app/src/main/res/drawable/bg_onboarding_btn_black.xml" value="0.109" />
+        <entry key="app/src/main/res/drawable/bg_onboarding_btn_white.xml" value="0.109" />
         <entry key="app/src/main/res/drawable/big_bottom_btn.xml" value="0.167" />
         <entry key="app/src/main/res/drawable/ic_baseline_emoji_emotions_24.xml" value="0.1415" />
+        <entry key="app/src/main/res/drawable/ic_bbibbi.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_bbibbi_logo.xml" value="0.1025" />
+        <entry key="app/src/main/res/drawable/ic_mission_bubble.xml" value="0.109" />
+        <entry key="app/src/main/res/drawable/ic_small_bbibbi.xml" value="0.1025" />
+        <entry key="app/src/main/res/layout/activity_album.xml" value="0.14945652173913043" />
         <entry key="app/src/main/res/layout/activity_code.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_create_family.xml" value="0.14130434782608695" />
         <entry key="app/src/main/res/layout/activity_enter_family.xml" value="0.23596014492753623" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.23596014492753623" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.13405797101449277" />
         <entry key="app/src/main/res/layout/activity_nickname.xml" value="0.22056159420289856" />
+        <entry key="app/src/main/res/layout/activity_question.xml" value="0.14945652173913043" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.10410334346504559" />
+        <entry key="app/src/main/res/layout/activiy_photo_mission.xml" value="0.14945652173913043" />
+        <entry key="app/src/main/res/layout/appbar.xml" value="0.14945652173913043" />
+        <entry key="app/src/main/res/layout/bbibbi.xml" value="0.14945652173913043" />
         <entry key="app/src/main/res/layout/fragment_create_nickname_family.xml" value="0.10460992907801418" />
         <entry key="app/src/main/res/layout/fragment_create_nickname_my.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_enter_first.xml" value="0.2658514492753623" />
+        <entry key="app/src/main/res/layout/fragment_enter_first.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_enter_second.xml" value="0.2658514492753623" />
         <entry key="app/src/main/res/layout/fragment_nickname_family.xml" value="0.14130434782608695" />
-        <entry key="app/src/main/res/layout/fragment_start_first.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_start_fourth.xml" value="0.2140625" />
-        <entry key="app/src/main/res/layout/fragment_start_second.xml" value="0.2140625" />
+        <entry key="app/src/main/res/layout/fragment_start_first.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_start_fourth.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_start_second.xml" value="0.3829268292682927" />
         <entry key="app/src/main/res/layout/fragment_start_third.xml" value="0.2140625" />
       </map>
     </option>

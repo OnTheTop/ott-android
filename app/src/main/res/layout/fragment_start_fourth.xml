@@ -17,7 +17,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/start_fourth_btn_close"
@@ -26,26 +27,31 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/ic_close"
+            android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/start_fourth_tv_description"
+            style="@style/font_Heading5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="89dp"
             android:gravity="center"
             android:text="@string/onboarding_tv_complete_code_description"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/start_fourth_btn_close" />
 
         <TextView
             android:id="@+id/start_fourth_tv_family_name"
+            style="@style/font_Heading6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="47dp"
             android:text="@string/onboarding_tv_family_name"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toStartOf="@id/start_fourth_tv_family_description"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,22 +59,27 @@
 
         <TextView
             android:id="@+id/start_fourth_tv_family_description"
+            style="@style/font_Heading6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="47dp"
             android:text="@string/onboarding_tv_description"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/start_fourth_tv_family_name"
             app:layout_constraintTop_toBottomOf="@id/start_fourth_tv_description" />
 
         <TextView
             android:id="@+id/start_fourth_tv_code"
+            style="@style/font_Heading6"
             android:layout_width="0dp"
             android:layout_height="57dp"
             android:layout_marginHorizontal="28dp"
             android:layout_marginTop="18dp"
+            android:background="@drawable/ic_onboarding_code"
             android:gravity="center"
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/start_fourth_tv_family_description"
@@ -76,11 +87,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/start_fourth_btn_copy"
+            style="@style/font_Heading6"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="17dp"
+            android:background="@drawable/bg_onboarding_btn_black"
             android:text="@string/onboarding_btn_copy"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

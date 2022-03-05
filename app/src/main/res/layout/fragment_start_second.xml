@@ -16,15 +16,26 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <include
+            android:id="@+id/start_appbar"
+            layout="@layout/appbar"/>
 
         <TextView
             android:id="@+id/start_second_tv_title"
+            style="@style/font_Heading5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="136dp"
             android:text="@string/onboarding_tv_family_nickname"
+            android:textColor="@color/white"
+            android:shadowColor="@color/black"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -32,21 +43,30 @@
 
         <EditText
             android:id="@+id/start_second_edt_nickname"
+            style="@style/font_Heading6"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="15dp"
+            android:background="@drawable/bg_onboarding_btn_white"
+            android:gravity="center"
+            android:hint="@string/onboarding_edt_hint_family_nickname"
+            android:textColor="@color/white"
+            android:textColorHint="@color/light_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/start_second_tv_title" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/start_second_btn_next"
+            style="@style/font_Heading6"
             android:layout_width="0dp"
             android:layout_height="56dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="17dp"
+            android:background="@drawable/bg_onboarding_btn_black"
             android:text="@string/onboarding_btn_next"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
