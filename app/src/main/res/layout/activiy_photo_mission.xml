@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="photoActivity"
             type="com.unithon.ott.presentation.ui.photo.PhotoMissionActivity" />
@@ -16,59 +17,74 @@
             android:id="@+id/tv_photo_mission_guide"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="사진 재현하기 미션"
+            android:text="@string/photo_mission_tv_guide"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_guide"
-            app:layout_constraintStart_toStartOf="@id/tv_photo_mission_guide"
-            android:text="과거 사진"
             android:id="@+id/tv_photo_mission_past"
-            />
-
-        <ImageView
-            android:onClick="@{() -> photoActivity.openGalleryListener()}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_past"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/photo_mission_tv_past"
+            app:layout_constraintStart_toStartOf="@id/tv_photo_mission_guide"
+            app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_guide" />
+
+        <ImageView
+            android:id="@+id/iv_photo_mission_past"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> photoActivity.openGalleryListener()}"
             android:src="@drawable/ic_launcher_foreground"
-            android:id="@+id/iv_photo_mission_past"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_past" />
 
         <TextView
+            android:id="@+id/tv_photo_mission_recent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_past"
+            android:text="@string/photo_mission_tv_recent"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="현재 사진"
-            android:id="@+id/tv_photo_mission_recent"
-            />
+            app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_past" />
 
         <ImageView
-            android:onClick="@{() -> photoActivity.openGalleryListener()}"
             android:id="@+id/iv_photo_mission_recent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="@{() -> photoActivity.openGalleryListener()}"
             android:src="@drawable/ic_launcher_foreground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_photo_mission_recent" />
 
+
+        <TextView
+            android:id="@+id/tv_photo_mission_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo_mission_comment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_recent" />
+
         <EditText
+            android:id="@+id/et_photo_mission_comment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_recent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/et_photo_mission_comment"
             android:autofillHints="false"
-            android:inputType="" />
+            android:inputType=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_comment" />
+
+        <Button
+            android:id="@+id/btn_photo_mission_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_registration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
