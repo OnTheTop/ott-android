@@ -33,6 +33,11 @@
     <string name="album_appbar_main_title"> 가족 사진관</string>
 
     <!--    질문 미션   -->
+    <string name="question_appbar_main_title">오늘의 질문</string>
+    <string name="photo_mission_tv_guide2">과거에 찍었던 가족사진을\n포즈,의상,배경등을 비슷하게 재현하여\n다시 찍어봅시다</string>
+    <string name="photo_mission_et_comment_hint">찍은 사진에 대한 이야기를 남겨주세요.. \n(40자 이내)</string>
+
+
 
     <!--    온보딩     -->
     <string name="onboarding_btn_create_family">새로운 패밀리 만들기</string>
@@ -49,7 +54,6 @@
     <string name="onboarding_tv_enter_code">가족 참여 코드 입력하기</string>
     <string name="onboarding_edt_hint_code">가족 참여 코드를 입력해주세요..</string>
     <string name="onboarding_btn_complete">완료하기</string>
-
 
 </resources>
 
