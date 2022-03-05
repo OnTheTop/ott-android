@@ -172,6 +172,7 @@
                     app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_recent" />
 
                 <EditText
+                    android:text="@={photoViewModel.photoComment}"
                     android:id="@+id/et_photo_mission_comment"
                     style="@style/font_small"
                     android:layout_width="0dp"
