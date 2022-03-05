@@ -5,7 +5,6 @@ import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseFragment
 import com.unithon.ott.databinding.FragmentStartFourthBinding
