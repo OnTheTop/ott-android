@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-    private const val TIMEOUT_COUNT: Long = 10
+    private const val TIMEOUT_COUNT: Long = 100
     private const val BASE_URL ="http://3.36.84.241:3000/"
 
     fun getClient(): Retrofit {

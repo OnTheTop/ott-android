@@ -36,5 +36,8 @@ class HistoryViewModel : ViewModel() {
             _missionList.postValue(missionListResponse.body()?.missionInfo)
             Log.d("####", missionListResponse.body().toString())
         }
+        else {
+            Log.d("####", missionListResponse.code().toString())
+        }
     }
 }

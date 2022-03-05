@@ -94,13 +94,14 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="12dp"
-                android:text="@string/history_graph_tv_title"
                 android:textColor="@color/background"
                 app:layout_constraintEnd_toEndOf="@id/history_iv_graph"
                 app:layout_constraintStart_toStartOf="@id/history_iv_graph"
-                app:layout_constraintTop_toTopOf="@id/history_iv_graph" />
+                app:layout_constraintTop_toTopOf="@id/history_iv_graph"
+                tools:text="@string/history_graph_tv_title" />
 
             <View
+                android:id="@+id/history_total_graph"
                 android:layout_width="0dp"
                 android:layout_height="8dp"
                 android:layout_marginStart="12dp"
@@ -109,11 +110,32 @@
                 android:background="@drawable/bg_history_total_graph"
                 app:layout_constraintEnd_toEndOf="@id/history_iv_graph"
                 app:layout_constraintStart_toStartOf="@id/history_iv_graph"
-                app:layout_constraintTop_toBottomOf="@id/history_tv_graph_title"/>
+                app:layout_constraintTop_toBottomOf="@id/history_tv_graph_title" />
+
+            <View
+                android:id="@+id/history_love_graph"
+                android:layout_width="0.1dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/bg_history_love_graph"
+                app:layout_constraintStart_toStartOf="@id/history_iv_graph"
+                app:layout_constraintTop_toBottomOf="@id/history_tv_graph_title" />
+
+            <TextView
+                android:id="@+id/history_tv_member"
+                style="@style/font_tiny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/light_blue"
+                app:layout_constraintStart_toStartOf="@id/history_total_graph"
+                app:layout_constraintTop_toBottomOf="@id/history_love_graph"
+                tools:text="asdf" />
+
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/history_tl"
-                app:tabTextAppearance="@style/font_Heading6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
@@ -124,6 +146,7 @@
                 app:layout_constraintTop_toBottomOf="@id/history_iv_graph"
                 app:tabIndicatorColor="@color/main_yellow"
                 app:tabSelectedTextColor="@color/main_yellow"
+                app:tabTextAppearance="@style/font_Heading6"
                 app:tabTextColor="@color/light_blue" />
 
             <androidx.viewpager2.widget.ViewPager2
