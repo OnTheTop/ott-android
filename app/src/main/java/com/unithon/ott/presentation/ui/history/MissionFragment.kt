@@ -1,28 +1,41 @@
 package com.unithon.ott.presentation.ui.history
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
+import android.util.Log
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseFragment
 import com.unithon.ott.databinding.FragmentMissionBinding
+import com.unithon.ott.presentation.adapter.MissionListAdapter
+import com.unithon.ott.presentation.ui.question.QuestionActivity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_mission) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
-    }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//        viewModel = ViewModelProvider(this).get(SearchRecipeViewModel::class.java)
-//        binding.viewModel = viewModel
-//    }
+    private val viewModel by lazy { ViewModelProvider(requireActivity()).get(HistoryViewModel::class.java) }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
+
+        binding.missionRvMission.apply {
+            adapter = MissionListAdapter { it ->
+                val intent = Intent(requireContext(), QuestionActivity::class.java)
+                intent.putExtra("missionId", it)
+                startActivity(intent)
+            }
+            layoutManager = GridLayoutManager(requireContext(), 2)
+        }
+
+    }
 
 }
