@@ -42,7 +42,8 @@
 
     <!--    질문 미션   -->
     <string name="question_appbar_main_title">오늘의 질문</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="photo_mission_tv_guide2">과거에 찍었던 가족사진을\n포즈,의상,배경등을 비슷하게 재현하여\n다시 찍어봅시다</string>
+    <string name="photo_mission_et_comment_hint">찍은 사진에 대한 이야기를 남겨주세요.. \n(40자 이내)</string>
+
 </resources>
 
