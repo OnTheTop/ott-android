@@ -3,7 +3,8 @@
     <string name="shared_pref_key">OTT_DB</string>
 
     <!--    하드 코딩용    -->
-    <string name="home_tv_hard_date">03.04</string>
+    <string name="home_tv_hard_date">00.00</string>
+    <string name="history_tv_hard_date">0000년 00월</string>
 
     <!--    로딩 다이얼로그    -->
     <string name="loading_dialog_message">잠시만 기다려주세요</string>
@@ -12,7 +13,14 @@
     <string name="home_tv_title">응답하라 패밀리</string>
     <string name="home_tv_greeting">응답하라 패밀리!\n삐삐를 눌러서\n질문 미션에 응답해보세요!</string>
     <string name="home_tv_today_mission">오늘의 미션</string>
-  
+    <string name="home_tv_intro">가족들과 데일리 질문 미션과\n사진 미션을 통해\n서로의 추억을 공유하고, 쌓아가 보세요!</string>
+
+    <!--    히스토리    -->
+    <string name="history_graph_tv_intro">FAMILY MISSION WITH MONTHLY MISSION</string>
+    <string name="history_graph_tv_title">💖%s 사랑 게이지💖</string>
+    <string name="history_tab_mission">미션모음</string>
+    <string name="history_tab_album">가족사진</string>
+
     <!-- Button 모음 -->
     <string name="btn_registration">등록하기</string>자
     <string name="btn_finish_answer">답변 완료하기</string>
@@ -43,6 +51,21 @@
     <string name="question_tv_nickname_guide">ID</string>
     <string name="photo_question_answer_hint">질문의 답변을 입력해주세요.. \n(100 이내)</string>
 
+    <!--    온보딩     -->
+    <string name="onboarding_btn_create_family">새로운 패밀리 만들기</string>
+    <string name="onboarding_btn_enter_family">패밀리 참여하기</string>
+    <string name="onboarding_tv_family_nickname">가족 닉네임 정하기</string>
+    <string name="onboarding_btn_next">다음</string>
+    <string name="onboarding_tv_my_nickname">내 닉네임 입력하기</string>
+    <string name="onboarding_edt_hint_nickname">서로를 구분할 닉네임을 입력해주세요</string>
+    <string name="onboarding_tv_hint_nickname">예) 예쁜엄마, 둘째 아들, 멋쟁이 할머니..</string>
+    <string name="onboarding_tv_complete_code_description">가족 참여코드가 생성되었어요\n가족들에게 공유 후 시작해보세요!</string>
+    <string name="onboarding_tv_description">가족 참여 코드</string>
+    <string name="onboarding_tv_family_name">쭈꾸미네</string>
+    <string name="onboarding_btn_copy">복사하기</string>
+    <string name="onboarding_tv_enter_code">가족 참여 코드 입력하기</string>
+    <string name="onboarding_edt_hint_code">가족 참여 코드를 입력해주세요..</string>
+    <string name="onboarding_btn_complete">완료하기</string>
 
 </resources>
 

@@ -3,13 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/drawable/background_history_total_graph.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/drawable/bg_history_love_graph.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/drawable/ic_close.xml" value="0.16614583333333333" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/drawable/ic_history_close.xml" value="0.16614583333333333" />
         <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/activity_album.xml" value="0.25729166666666664" />
-        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/activity_history.xml" value="0.27239583333333334" />
-        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/activity_history.xml" value="0.33" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/activity_question.xml" value="0.24270833333333333" />
-        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/appbar.xml" value="0.135632183908046" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/appbar.xml" value="0.18" />
         <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/bbibbi.xml" value="0.8174603174603174" />
         <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/dialog_loading.xml" value="0.22" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/fragment_album.xml" value="0.24479166666666666" />
+        <entry key="..\:/Users/82108/ott-android/app/src/main/res/layout/fragment_mission.xml" value="0.259375" />
       </map>
     </option>
   </component>
