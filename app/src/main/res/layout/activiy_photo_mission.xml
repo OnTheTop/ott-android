@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="photoActivity"
+            type="com.unithon.ott.presentation.ui.photo.PhotoMissionActivity" />
+
+        <variable
+            name="photoViewModel"
+            type="com.unithon.ott.presentation.ui.photo.PhotoMissionViewModel" />
+
+
+        <variable
+            name="photoType"
+            type="com.unithon.ott.common.utils.PhotoType" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/photo_mission_appbar"
+            layout="@layout/appbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{@string/photo_appbar_main_title}" />
+
+        <ScrollView
+            android:id="@+id/sv_photo_mission"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_photo_mission_ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_mission_appbar"
+            android:clipToPadding="false"
+            android:overScrollMode="never">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                android:id="@+id/tv_photo_mission_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/photo_mission_tv_guide"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_photo_mission_past"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photo_mission_tv_past"
+                    app:layout_constraintStart_toStartOf="@id/tv_photo_mission_guide"
+                    app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_guide" />
+
+                <ImageView
+                    android:id="@+id/iv_photo_mission_past"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:onClick="@{() -> photoActivity.openGalleryListener(photoType.PAST)}"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_past" />
+
+                <TextView
+                    android:id="@+id/tv_photo_mission_recent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photo_mission_tv_recent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_past" />
+
+                <ImageView
+                    android:id="@+id/iv_photo_mission_recent"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:onClick="@{() -> photoActivity.openGalleryListener(photoType.RECENT)}"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher_foreground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_photo_mission_recent" />
+
+
+                <TextView
+                    android:id="@+id/tv_photo_mission_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photo_mission_comment"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_photo_mission_recent" />
+
+                <EditText
+                    android:id="@+id/et_photo_mission_comment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="false"
+                    android:inputType=""
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_photo_mission_comment" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/btn_photo_mission_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_registration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
