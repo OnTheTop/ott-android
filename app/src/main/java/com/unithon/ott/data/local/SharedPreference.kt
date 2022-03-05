@@ -34,5 +34,23 @@ object SharedPreference {
     fun getMission(): Int? = pref?.getInt(MISSION, -1)
     fun setMission(mission: Int) = pref?.edit()?.putInt(MISSION, mission)?.apply()
 
+    private const val FAMILY_CODE = "FAMILY_CODE"
+    fun getFamilyCode() : String? = pref?.getString(FAMILY_CODE, null)
+    fun setFamilyCode(code : String) = pref?.edit()?.putString(FAMILY_CODE,code)?.apply()
 
+    private const val FAMILY_ID = "FAMILY_ID"
+    fun getFamilyId() : Int?= pref?.getInt(FAMILY_ID , -1)
+    fun setFamilyId(id : Int) = pref?.edit()?.putInt(FAMILY_ID,id)?.apply()
+
+    private const val NICKNAME = "NICKNAME"
+    fun getNickName() : String?= pref?.getString(NICKNAME, null)
+    fun setNickName(nickname : String)= pref?.edit()?.putString(NICKNAME, nickname)?.apply()
+
+    private const val USER_ID= "USER_ID"
+    fun getUserId() : Int?= pref?.getInt(USER_ID , -1)
+    fun setUserId(id : Int)= pref?.edit()?.putInt(USER_ID,id)?.apply()
+
+    private const val IS_LEADER= "IS_LEADER"
+    fun getIsLeader() : Boolean?= pref?.getBoolean(IS_LEADER, false)
+    fun setIsLeader(isLeader : Boolean)= pref?.edit()?.putBoolean(IS_LEADER, isLeader)?.apply()
 }

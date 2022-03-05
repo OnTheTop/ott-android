@@ -37,6 +37,8 @@
             app:layout_goneMarginTop="136dp" />
 
         <EditText
+            android:inputType="text"
+            android:text="@={viewModel.nickname}"
             android:id="@+id/enter_second_edt_nickname"
             android:layout_width="0dp"
             android:layout_height="56dp"

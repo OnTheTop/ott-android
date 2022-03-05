@@ -42,6 +42,7 @@
             app:layout_goneMarginTop="136dp" />
 
         <EditText
+            android:text="@={startViewModel.familyNick}"
             android:id="@+id/start_second_edt_nickname"
             style="@style/font_Heading6"
             android:layout_width="0dp"
@@ -55,7 +56,8 @@
             android:textColorHint="@color/light_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/start_second_tv_title" />
+            app:layout_constraintTop_toBottomOf="@id/start_second_tv_title"
+            android:inputType="text" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/start_second_btn_next"
