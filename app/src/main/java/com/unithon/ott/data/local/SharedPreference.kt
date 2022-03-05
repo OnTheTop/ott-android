@@ -3,6 +3,7 @@ package com.unithon.ott.data.local
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
+import android.util.Log
 import com.unithon.ott.R
 
 object SharedPreference {

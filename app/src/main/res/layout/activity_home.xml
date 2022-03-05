@@ -5,6 +5,8 @@
 
     <data>
 
+        <import type="android.view.View" />
+
         <variable
             name="viewModel"
             type="com.unithon.ott.presentation.ui.home.HomeViewModel" />
@@ -84,12 +86,12 @@
                 android:layout_height="0dp"
                 android:layout_marginBottom="18dp"
                 android:gravity="center"
-                android:text="@string/home_tv_greeting"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="@id/home_iv_speech_bubble"
                 app:layout_constraintEnd_toEndOf="@id/home_iv_speech_bubble"
                 app:layout_constraintStart_toStartOf="@id/home_iv_speech_bubble"
-                app:layout_constraintTop_toTopOf="@id/home_iv_speech_bubble" />
+                app:layout_constraintTop_toTopOf="@id/home_iv_speech_bubble"
+                tools:text="@string/home_tv_greeting" />
 
             <include
                 android:id="@+id/home_bbibbi"
@@ -97,26 +99,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
+                android:visibility="@{viewModel.isFirst() == false ? View.VISIBLE : View.INVISIBLE}"
                 app:date="@{@string/home_tv_hard_date}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/home_iv_speech_bubble"
                 app:title="@{@string/home_tv_today_mission}" />
 
+            <ImageView
+                android:id="@+id/home_first_bbibbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/ic_first_bbibbi"
+                android:visibility="@{viewModel.isFirst() == true ? View.VISIBLE : View.INVISIBLE}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_iv_speech_bubble" />
+
             <TextView
+                android:id="@+id/home_tv_intro"
+                style="@style/font_Heading6"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/home_tv_intro"
-                android:id="@+id/home_tv_intro"
-                android:textColor="@color/light_blue"
-                style="@style/font_Heading6"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/home_bbibbi"
-                android:gravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginTop="76dp"
-                android:layout_marginBottom="47dp"/>
+                android:layout_marginBottom="47dp"
+                android:gravity="center"
+                android:textColor="@color/light_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_bbibbi"
+                tools:text="@string/home_tv_intro" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
