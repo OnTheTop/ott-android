@@ -30,9 +30,10 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
 
         // 삐삐 상태
-        if (viewModel.isFirst == true) { isFirst() }
-        else if (viewModel.isToday == true) { isDone() }
-        else { notDone() }
+//        if (viewModel.isFirst == true) { isFirst() }
+//        else if (viewModel.isToday == true) { isDone() }
+//        else { notDone() }
+        isDone()
 
 
 
