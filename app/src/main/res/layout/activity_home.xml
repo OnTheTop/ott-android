@@ -32,6 +32,7 @@
                 android:id="@+id/home_ll_appbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_vertical"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +45,57 @@
                     android:layout_margin="8dp"
                     android:src="@drawable/ic_menu" />
 
+                <TextView
+                    android:id="@+id/home_tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/home_tv_title" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:src="@drawable/ic_small_bbibbi" />
+
 
             </LinearLayout>
+
+            <ImageView
+                android:id="@+id/home_iv_speech_bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="188dp"
+                android:layout_marginBottom="334dp"
+                android:src="@drawable/ic_speech_bubble"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/home_tv_greeting"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="18dp"
+                android:gravity="center"
+                android:text="@string/home_tv_greeting"
+                app:layout_constraintBottom_toBottomOf="@id/home_iv_speech_bubble"
+                app:layout_constraintEnd_toEndOf="@id/home_iv_speech_bubble"
+                app:layout_constraintStart_toStartOf="@id/home_iv_speech_bubble"
+                app:layout_constraintTop_toTopOf="@id/home_iv_speech_bubble" />
+
+            <include
+                layout="@layout/bbibbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:date="@{@string/home_tv_hard_date}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/home_iv_speech_bubble"
+                app:title="@{@string/home_tv_today_mission}" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
