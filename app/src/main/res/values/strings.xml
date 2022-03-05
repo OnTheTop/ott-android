@@ -54,6 +54,7 @@
     <string name="onboarding_tv_enter_code">가족 참여 코드 입력하기</string>
     <string name="onboarding_edt_hint_code">가족 참여 코드를 입력해주세요..</string>
     <string name="onboarding_btn_complete">완료하기</string>
+    <string name="onboarding_edt_hint_family_nickname">우리 가족 닉네임을 정해주세요..</string>
 
 </resources>
 
