@@ -20,6 +20,11 @@
     <string name="home_tv_first_intro">삐삐를 통해 전달된 메세지 3353,\n바로 가족이 함께 모여야한다는 의미에요!</string>
     <string name="home_tv_done_greeting">오늘의 미션에 답변 완료\n했습니다 :)</string>
 
+    <string name="home_drawer_family_code">가족 코드 보기</string>
+    <string name="home_drawer_fix_nickname">닉네임 수정하기</string>
+    <string name="home_drawer_producer">만든 이 보기</string>
+    <string name="home_drawer_version">서비스 버전 보기</string>
+
     <!--    히스토리    -->
     <string name="history_graph_tv_intro">FAMILY MISSION WITH MONTHLY MISSION</string>
     <string name="history_graph_tv_title">💖%s 사랑 게이지💖</string>
