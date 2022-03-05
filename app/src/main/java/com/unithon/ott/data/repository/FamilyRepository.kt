@@ -2,7 +2,6 @@ package com.unithon.ott.data.repository
 
 import com.unithon.ott.data.model.FamilyModel
 import com.unithon.ott.data.remote.datasource.FamilyDatasource
-import com.unithon.ott.data.remote.response.FamilyMemberResponse
 import com.unithon.ott.data.remote.response.FamilyResponse
 import com.unithon.ott.domain.repository.FamilyRepository
 import retrofit2.Response
@@ -19,7 +18,7 @@ class FamilyRepositoryImpl: FamilyRepository  {
     override suspend fun postFamilyMember(
         memberNickname: String,
         familyCode: String,
-    ): Response<FamilyMemberResponse> {
+    ): Response<FamilyResponse> {
         return familyDatasource.postFamilyMember(memberNickname,familyCode)
     }
 }

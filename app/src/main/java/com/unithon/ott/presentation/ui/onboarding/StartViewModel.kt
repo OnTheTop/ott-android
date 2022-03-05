@@ -3,12 +3,9 @@ package com.unithon.ott.presentation.ui.onboarding
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.unithon.ott.data.model.FamilyModel
-import com.unithon.ott.data.remote.response.FamilyMemberResponse
 import com.unithon.ott.data.remote.response.FamilyResponse
 import com.unithon.ott.data.repository.FamilyRepositoryImpl
-import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.lang.Exception
 
@@ -34,12 +31,14 @@ class StartViewModel : ViewModel() {
 
     suspend fun postFamilyMember(){
         try {
-            val response: Response<FamilyMemberResponse> = familyRepository.postFamilyMember(
+            val response: Response<FamilyResponse> = familyRepository.postFamilyMember(
                 nickname.value?:"",familyCode.value?:""
             )
-            Log.d("ViewModel: ", "가족 구성원 가입하기!! : ${response.body()}")
+            Log.d("ViewModel: ", "가족 구성원 가입하기!! : ${response.errorBody()}")
+            Log.d("ViewModel: ", "가족 구성원 가입하기!! : ${response.headers()}")
+            Log.d("ViewModel: ", "가족 구성원 가입하기!! : ${response.message()}")
             if (response.isSuccessful) {
-                
+                Log.d("ViewModel: ", "가족 구성원 가입하기!! : ${response.body()?.memberNickname}")
             }
         } catch (e: Exception) {
             Log.d("Error",e.message.toString())
