@@ -3,6 +3,7 @@ package com.unithon.ott.data.repository
 import com.unithon.ott.data.local.LocalDataSourceImpl
 import com.unithon.ott.data.remote.datasource.MissionDatasourceImpl
 import com.unithon.ott.data.remote.response.MissionListResponse
+import com.unithon.ott.data.remote.response.MissionResponse
 import com.unithon.ott.domain.repository.MissionRepository
 import retrofit2.Response
 
@@ -24,11 +25,15 @@ class MissionRepositoryImpl : MissionRepository {
         localDataSource.setIsToday(isToday)
     }
 
-    override fun getMission(): Int? = localDataSource.getMission()
-    override fun setMission(mission: Int) {
+    override fun getMissionId(): Int? = localDataSource.getMission()
+
+    override fun setMissionId(mission: Int) {
         localDataSource.setMission(mission)
     }
 
     override suspend fun getMissionList(familyId: Int): Response<MissionListResponse> =
         missionDataSource.getMissionList(familyId)
+
+    override suspend fun getMission(missionId: Int, familyId: Int): Response<MissionResponse> =
+        missionDataSource.getMission(missionId, familyId)
 }
