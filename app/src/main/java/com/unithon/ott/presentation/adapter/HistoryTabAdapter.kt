@@ -13,7 +13,6 @@ class HistoryTabAdapter(fragmentActivity: FragmentActivity) :
     override fun getItemCount(): Int = 2
 
     override fun createFragment(position: Int): Fragment {
-        Log.d("###", position.toString())
         return when (position) {
             0 -> MissionFragment()
             1 -> AlbumFragment()
