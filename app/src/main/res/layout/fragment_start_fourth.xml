@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fourthFragment"
+            type="com.unithon.ott.presentation.ui.onboarding.StartFragment4" />
+
+        <variable
+            name="viewModel"
+            type="com.unithon.ott.presentation.ui.onboarding.StartViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_fourth_btn_close"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/start_fourth_tv_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="89dp"
+            android:gravity="center"
+            android:text="@string/onboarding_tv_complete_code_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_fourth_btn_close" />
+
+        <TextView
+            android:id="@+id/start_fourth_tv_family_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47dp"
+            android:text="@string/onboarding_tv_family_name"
+            app:layout_constraintEnd_toStartOf="@id/start_fourth_tv_family_description"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_fourth_tv_description" />
+
+        <TextView
+            android:id="@+id/start_fourth_tv_family_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="47dp"
+            android:text="@string/onboarding_tv_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/start_fourth_tv_family_name"
+            app:layout_constraintTop_toBottomOf="@id/start_fourth_tv_description" />
+
+        <TextView
+            android:id="@+id/start_fourth_tv_code"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:layout_marginHorizontal="28dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start_fourth_tv_family_description"
+            tools:text="A030381" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/start_fourth_btn_copy"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="17dp"
+            android:text="@string/onboarding_btn_copy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
