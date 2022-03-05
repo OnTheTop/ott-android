@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_start_graph"
+    app:startDestination="@id/first_start_fragment">
+
+    <fragment
+        android:id="@+id/first_start_fragment"
+        android:name="com.unithon.ott.presentation.ui.onboarding.StartFragment1"
+        tools:layout="@layout/fragment_start_first">
+
+        <action
+            android:id="@+id/action_first_write_fragment_to_second_write_fragment"
+            app:destination="@id/second_start_fragment"
+            />
+
+        <action
+            android:id="@+id/action_first_start_fragment_to_first_enter_fragment"
+            app:destination="@id/first_enter_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_start_fragment"
+        android:name="com.unithon.ott.presentation.ui.onboarding.StartFragment2"
+        tools:layout="@layout/fragment_start_second"
+        android:label="Second Start">
+
+        <action
+            android:id="@+id/action_second_start_fragment_to_third_start_fragment"
+            app:destination="@+id/third_start_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/third_start_fragment"
+        android:name="com.unithon.ott.presentation.ui.onboarding.StartFragment3"
+        tools:layout="@layout/fragment_start_third"
+        android:label="Third Start">
+
+        <action
+            android:id="@+id/action_third_start_fragment_to_fourth_start_fragment"
+            app:destination="@+id/fourth_start_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/fourth_start_fragment"
+        android:name="com.unithon.ott.presentation.ui.onboarding.StartFragment4"
+        tools:layout="@layout/fragment_start_fourth"
+        android:label="Fourth Start">
+    </fragment>
+
+    <fragment
+        android:id="@+id/first_enter_fragment"
+        android:name="com.unithon.ott.presentation.ui.onboarding.enter.EnterFragment1"
+        tools:layout="@layout/fragment_enter_first"
+        android:label="First Enter">
+
+        <action
+            android:id="@+id/action_first_enter_fragment_to_second_enter_fragment"
+            app:destination="@+id/second_enter_fragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_enter_fragment"
+        android:name="com.unithon.ott.presentation.ui.onboarding.enter.EnterFragment2"
+        tools:layout="@layout/fragment_enter_second"
+        android:label="Second Enter">
+    </fragment>
+
+</navigation>
