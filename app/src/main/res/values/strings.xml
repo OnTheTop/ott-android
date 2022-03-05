@@ -61,7 +61,6 @@
     <string name="onboarding_tv_hint_nickname">예) 예쁜엄마, 둘째 아들, 멋쟁이 할머니..</string>
     <string name="onboarding_tv_complete_code_description">가족 참여코드가 생성되었어요\n가족들에게 공유 후 시작해보세요!</string>
     <string name="onboarding_tv_description">가족 참여 코드</string>
-    <string name="onboarding_tv_family_name">쭈꾸미네</string>
     <string name="onboarding_btn_copy">복사하기</string>
     <string name="onboarding_tv_enter_code">가족 참여 코드 입력하기</string>
     <string name="onboarding_edt_hint_code">가족 참여 코드를 입력해주세요..</string>
