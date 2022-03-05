@@ -18,6 +18,7 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseActivity
+import com.unithon.ott.common.utils.PhotoType
 import com.unithon.ott.databinding.ActiviyPhotoMissionBinding
 
 class PhotoMissionActivity : BaseActivity<ActiviyPhotoMissionBinding>(R.layout.activiy_photo_mission) {
@@ -25,21 +26,54 @@ class PhotoMissionActivity : BaseActivity<ActiviyPhotoMissionBinding>(R.layout.a
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
             if (isGranted) {
-                openGalleryListener()
+                openGalleryListener(photoType)
             }
         }
+    private val photoMissionViewModel : PhotoMissionViewModel by viewModels()
+    private lateinit var photoType : PhotoType
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         initBinding()
+        openGallery()
+
+        photoMissionViewModel.pastImage.observe(this){
+            binding.ivPhotoMissionPast.setImageURI(it)
+        }
+        photoMissionViewModel.recentImage.observe(this){
+            binding.ivPhotoMissionRecent.setImageURI(it)
+        }
     }
 
     private fun initBinding() {
         binding.photoActivity = this
+        binding.photoViewModel = photoMissionViewModel
     }
 
-    fun openGalleryListener() {
+    private fun openGallery() {
+        reviewImageLauncher =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                if (it.resultCode == RESULT_OK) {
+                    val intentResult = if (it.data == null) {
+                        return@registerForActivityResult
+                    } else {
+                        it.data
+                    }
+                    intentResult?.clipData?.apply {
+                        val uri = this.getItemAt(0).uri
+                        val path = uriToPath(context = this@PhotoMissionActivity, uri)
+                        if(photoType == PhotoType.PAST){
+                            photoMissionViewModel.setPastImage(uri)
+                        }else{
+                            photoMissionViewModel.setRecentImage(uri)
+                        }
+                    }
+                }
+            }
+    }
+
+    fun openGalleryListener(type : PhotoType) {
         when {
             ContextCompat.checkSelfPermission(
                 this,
@@ -50,6 +84,7 @@ class PhotoMissionActivity : BaseActivity<ActiviyPhotoMissionBinding>(R.layout.a
                 intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, false)
                 intent.data = MediaStore.Images.Media.EXTERNAL_CONTENT_URI
                 reviewImageLauncher.launch(intent)
+                photoType = type
             }
             shouldShowRequestPermissionRationale(Manifest.permission.WRITE_EXTERNAL_STORAGE)
             -> {
