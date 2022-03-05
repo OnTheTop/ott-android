@@ -1,6 +1,5 @@
 package com.unithon.ott.presentation.ui.history
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -22,11 +21,13 @@ class HistoryViewModel : ViewModel() {
     private val _gauge: MutableLiveData<Int> = MutableLiveData()
     val gauge: LiveData<Int>
         get() = _gauge
-    private val _missionList: MutableLiveData<ArrayList<Mission>> = MutableLiveData()
+    private val _missionList: MutableLiveData<ArrayList<Mission>> = MutableLiveData(ArrayList())
     val missionList: LiveData<ArrayList<Mission>>
         get() = _missionList
 
-    suspend fun getMissionList(familyId: Int = 1) {
+    val familyId: Int = 1
+
+    suspend fun getMissionList() {
         val missionListResponse: Response<MissionListResponse> =
             missionRepository.getMissionList(familyId)
         if (missionListResponse.isSuccessful) {
@@ -34,10 +35,7 @@ class HistoryViewModel : ViewModel() {
             _memberNickname.postValue(missionListResponse.body()?.memberNickNames)
             _gauge.postValue(missionListResponse.body()?.gauge)
             _missionList.postValue(missionListResponse.body()?.missionInfo)
-            Log.d("####", missionListResponse.body().toString())
-        }
-        else {
-            Log.d("####", missionListResponse.code().toString())
+        } else {
         }
     }
 }

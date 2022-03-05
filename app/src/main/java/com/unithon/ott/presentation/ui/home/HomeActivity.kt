@@ -30,12 +30,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
 
         // 삐삐 상태
-//        if (viewModel.isFirst == true) { isFirst() }
-//        else if (viewModel.isToday == true) { isDone() }
-//        else { notDone() }
-        isDone()
-
-
+        if (viewModel.isFirst == true) { isFirst() }
+        else if (viewModel.isToday == true) { isDone() }
+        else { notDone() }
 
         binding.apply {
             homeBtnMenu.setOnClickListener {
@@ -44,6 +41,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
             }
             homeBtnHistory.setOnClickListener {
                 startActivity(Intent(this@HomeActivity, HistoryActivity::class.java))
+            }
+            homeBbibbi.bbibbiCl.setOnClickListener {
+
             }
         }
     }
