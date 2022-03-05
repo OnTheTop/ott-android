@@ -32,7 +32,8 @@
     <string name="history_tab_album">가족사진</string>
 
     <!-- Button 모음 -->
-    <string name="btn_registration">등록하기</string>
+    <string name="btn_registration">등록하기</string>자
+    <string name="btn_finish_answer">답변 완료하기</string>
 
     <!-- 이미지 접근 메세지 -->
     <string name="photo_appbar_main_title">깜짝 사진 업로드 미션</string>
@@ -46,14 +47,19 @@
     <string name="photo_mission_tv_past">과거 사진</string>
     <string name="photo_mission_tv_recent">현재 사진</string>
     <string name="photo_mission_comment">사진 코멘트</string>
+    <string name="photo_mission_tv_guide2">과거에 찍었던 가족사진을\n포즈,의상,배경등을 비슷하게 재현하여\n다시 찍어봅시다</string>
+    <string name="photo_mission_et_comment_hint">찍은 사진에 대한 이야기를 남겨주세요.. \n(40자 이내)</string>
 
     <!--    가족 사진관    -->
     <string name="album_appbar_main_title"> 가족 사진관</string>
 
     <!--    질문 미션   -->
     <string name="question_appbar_main_title">오늘의 질문</string>
-    <string name="photo_mission_tv_guide2">과거에 찍었던 가족사진을\n포즈,의상,배경등을 비슷하게 재현하여\n다시 찍어봅시다</string>
-    <string name="photo_mission_et_comment_hint">찍은 사진에 대한 이야기를 남겨주세요.. \n(40자 이내)</string>
+    <string name="question_tv_guide">오-늘의 질-문</string>
+    <string name="question_tv_don_look">☠️ 참고 사항 ☠️\n 가족 구성원 모두가 답변을 완료해야만\n열람가능해요!</string>
+    <string name="question_tv_content_guide">채팅 내용</string>
+    <string name="question_tv_nickname_guide">ID</string>
+    <string name="photo_question_answer_hint">질문의 답변을 입력해주세요.. \n(100 이내)</string>
 
     <!--    온보딩     -->
     <string name="onboarding_btn_create_family">새로운 패밀리 만들기</string>
@@ -70,6 +76,7 @@
     <string name="onboarding_tv_enter_code">가족 참여 코드 입력하기</string>
     <string name="onboarding_edt_hint_code">가족 참여 코드를 입력해주세요..</string>
     <string name="onboarding_btn_complete">완료하기</string>
+    <string name="onboarding_edt_hint_family_nickname">우리 가족 닉네임을 정해주세요..</string>
 
 </resources>
 

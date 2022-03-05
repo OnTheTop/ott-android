@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.unithon.ott.presentation.ui.question.QuestionViewModel" />
@@ -13,8 +14,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/background"
         tools:context=".presentation.ui.question.QuestionActivity">
-
 
         <include
             android:id="@+id/question_appbar"
@@ -23,6 +24,115 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:title="@{@string/question_appbar_main_title}" />
+
+        <ImageView
+            android:id="@+id/iv_question_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_question_bubble"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_appbar" />
+
+        <TextView
+            android:id="@+id/tv_question_date"
+            style="@style/font_Heading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingVertical="3dp"
+            android:text="03.24 (화)"
+            android:textColor="@color/mono10"
+            app:layout_constraintStart_toStartOf="@id/iv_question_bubble"
+            app:layout_constraintTop_toTopOf="@id/iv_question_bubble" />
+
+        <TextView
+            android:id="@+id/tv_question_guide"
+            style="@style/font_Heading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/question_tv_guide"
+            android:textColor="@color/main_pink"
+            app:layout_constraintBottom_toTopOf="@id/tv_question"
+            app:layout_constraintEnd_toEndOf="@id/iv_question_bubble"
+            app:layout_constraintStart_toStartOf="@id/iv_question_bubble"
+            app:layout_constraintTop_toTopOf="@id/iv_question_bubble"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_question"
+            style="@style/font_Heading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="33dp"
+            android:gravity="center"
+            android:textColor="@color/mono2"
+            app:layout_constraintBottom_toBottomOf="@id/iv_question_bubble"
+            app:layout_constraintEnd_toEndOf="@id/iv_question_bubble"
+            app:layout_constraintStart_toStartOf="@id/iv_question_bubble"
+            app:layout_constraintTop_toBottomOf="@id/tv_question_guide"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="어릴 적 가장 좋아했던 놀이는?" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_question_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginTop="24dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_question_bubble">
+
+            <TextView
+                style="@style/font_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/question_tv_nickname_guide"
+                android:textColor="@color/mono10" />
+
+            <TextView
+                style="@style/font_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="@string/question_tv_content_guide"
+                android:textColor="@color/mono10" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_question_list"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/ll_question_guide"
+            app:layout_constraintStart_toStartOf="@id/ll_question_guide"
+            app:layout_constraintTop_toBottomOf="@id/ll_question_guide"
+            tools:listitem="@layout/item_question_mission" />
+
+        <TextView
+            style="@style/font_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="@string/question_tv_don_look"
+            android:textColor="@color/light_blue"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -26,6 +26,7 @@ class PhotoMissionActivity : BaseActivity<ActiviyPhotoMissionBinding>(R.layout.a
     private val requestPermissionLauncher =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted: Boolean ->
             if (isGranted) {
+                photoType = PhotoType.PAST
                 openGalleryListener(photoType)
             }
         }
