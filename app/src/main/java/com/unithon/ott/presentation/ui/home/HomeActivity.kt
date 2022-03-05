@@ -9,6 +9,7 @@ import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseActivity
 import com.unithon.ott.databinding.ActivityHomeBinding
 import com.unithon.ott.presentation.ui.album.AlbumActivity
+import com.unithon.ott.presentation.ui.history.HistoryActivity
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
@@ -29,6 +30,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
             homeBtnMenu.setOnClickListener {
                 if (homeDl.isDrawerOpen(homeLlDrawer)) homeDl.closeDrawer(homeLlDrawer)
                 else homeDl.openDrawer(homeLlDrawer)
+            }
+            homeBtnHistory.setOnClickListener {
+                startActivity(Intent(this@HomeActivity, HistoryActivity::class.java))
             }
         }
     }
