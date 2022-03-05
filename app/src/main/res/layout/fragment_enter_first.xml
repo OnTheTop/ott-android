@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="136dp"
-            android:text="가족 참여 코드 입력하기"
+            android:text="@string/onboarding_tv_enter_code"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:hint="가족 참여 코드를 입력해주세요.."
+            android:hint="@string/onboarding_edt_hint_code"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/enter_first_tv_title" />
@@ -47,7 +47,7 @@
             android:layout_height="56dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="17dp"
-            android:text="다음"
+            android:text="@string/onboarding_btn_next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

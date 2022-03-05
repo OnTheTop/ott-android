@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="89dp"
-            android:text="내 닉네임 입력하기"
+            android:text="@string/onboarding_tv_my_nickname"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +36,7 @@
             android:layout_marginHorizontal="32dp"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:hint="서로를 구분할 닉네임을 입력해주세요"
+            android:hint="@string/onboarding_edt_hint_nickname"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/enter_second_tv_title" />
@@ -46,7 +46,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="예) 예쁜엄마, 둘째 아들, 멋쟁이 할머니.."
+            android:text="@string/onboarding_tv_hint_nickname"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/enter_second_edt_nickname"
             app:layout_constraintTop_toBottomOf="@id/enter_second_edt_nickname" />
@@ -57,7 +57,7 @@
             android:layout_height="56dp"
             android:layout_marginHorizontal="20dp"
             android:layout_marginBottom="17dp"
-            android:text="완료하기"
+            android:text="@string/onboarding_btn_complete"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
