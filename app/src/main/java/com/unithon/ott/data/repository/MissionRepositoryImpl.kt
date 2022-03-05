@@ -3,7 +3,7 @@ package com.unithon.ott.data.repository
 import com.unithon.ott.data.local.LocalDataSourceImpl
 import com.unithon.ott.data.remote.datasource.MissionDatasourceImpl
 import com.unithon.ott.data.remote.response.MissionListResponse
-import com.unithon.ott.data.remote.response.MissionResponse
+import com.unithon.ott.data.remote.response.CurMissionResponse
 import com.unithon.ott.domain.repository.MissionRepository
 import retrofit2.Response
 
@@ -34,6 +34,6 @@ class MissionRepositoryImpl : MissionRepository {
     override suspend fun getMissionList(familyId: Int): Response<MissionListResponse> =
         missionDataSource.getMissionList(familyId)
 
-    override suspend fun getMission(missionId: Int, familyId: Int): Response<MissionResponse> =
+    override suspend fun getMission(missionId: Int, familyId: Int): Response<CurMissionResponse> =
         missionDataSource.getMission(missionId, familyId)
 }

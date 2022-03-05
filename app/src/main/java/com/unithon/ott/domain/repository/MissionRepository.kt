@@ -1,7 +1,7 @@
 package com.unithon.ott.domain.repository
 
 import com.unithon.ott.data.remote.response.MissionListResponse
-import com.unithon.ott.data.remote.response.MissionResponse
+import com.unithon.ott.data.remote.response.CurMissionResponse
 import retrofit2.Response
 
 interface MissionRepository {
@@ -15,5 +15,5 @@ interface MissionRepository {
     fun setMissionId(mission: Int)
 
     suspend fun getMissionList(familyId: Int): Response<MissionListResponse>
-    suspend fun getMission(missionId: Int, familyId: Int): Response<MissionResponse>
+    suspend fun getMission(missionId: Int, familyId: Int): Response<CurMissionResponse>
 }
