@@ -1,5 +1,6 @@
 package com.unithon.ott.presentation.adapter
 
+import android.util.Log
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -12,6 +13,7 @@ class HistoryTabAdapter(fragmentActivity: FragmentActivity) :
     override fun getItemCount(): Int = 2
 
     override fun createFragment(position: Int): Fragment {
+        Log.d("###", position.toString())
         return when (position) {
             0 -> MissionFragment()
             1 -> AlbumFragment()

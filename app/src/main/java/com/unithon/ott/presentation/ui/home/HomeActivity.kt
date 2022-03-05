@@ -34,8 +34,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
         else if (viewModel.isToday == true) { isDone() }
         else { notDone() }
 
-
-
         binding.apply {
             homeBtnMenu.setOnClickListener {
                 if (homeDl.isDrawerOpen(homeLlDrawer)) homeDl.closeDrawer(homeLlDrawer)
@@ -43,6 +41,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
             }
             homeBtnHistory.setOnClickListener {
                 startActivity(Intent(this@HomeActivity, HistoryActivity::class.java))
+            }
+            homeBbibbi.bbibbiCl.setOnClickListener {
+
             }
         }
     }
