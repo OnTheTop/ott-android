@@ -3,7 +3,8 @@
     <string name="shared_pref_key">OTT_DB</string>
 
     <!--    하드 코딩용    -->
-    <string name="home_tv_hard_date">03.04</string>
+    <string name="home_tv_hard_date">00.00</string>
+    <string name="history_tv_hard_date">0000년 00월</string>
 
     <!--    로딩 다이얼로그    -->
     <string name="loading_dialog_message">잠시만 기다려주세요</string>
@@ -12,7 +13,14 @@
     <string name="home_tv_title">응답하라 패밀리</string>
     <string name="home_tv_greeting">응답하라 패밀리!\n삐삐를 눌러서\n질문 미션에 응답해보세요!</string>
     <string name="home_tv_today_mission">오늘의 미션</string>
-  
+    <string name="home_tv_intro">가족들과 데일리 질문 미션과\n사진 미션을 통해\n서로의 추억을 공유하고, 쌓아가 보세요!</string>
+
+    <!--    히스토리    -->
+    <string name="history_graph_tv_intro">FAMILY MISSION WITH MONTHLY MISSION</string>
+    <string name="history_graph_tv_title">💖%s 사랑 게이지💖</string>
+    <string name="history_tab_mission">미션모음</string>
+    <string name="history_tab_album">가족사진</string>
+
     <!-- Button 모음 -->
     <string name="btn_registration">등록하기</string>
 
@@ -36,8 +44,6 @@
     <string name="question_appbar_main_title">오늘의 질문</string>
     <string name="photo_mission_tv_guide2">과거에 찍었던 가족사진을\n포즈,의상,배경등을 비슷하게 재현하여\n다시 찍어봅시다</string>
     <string name="photo_mission_et_comment_hint">찍은 사진에 대한 이야기를 남겨주세요.. \n(40자 이내)</string>
-
-
 
     <!--    온보딩     -->
     <string name="onboarding_btn_create_family">새로운 패밀리 만들기</string>
