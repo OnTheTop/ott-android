@@ -9,13 +9,7 @@ import com.unithon.ott.databinding.ActivityQuestionBinding
 class QuestionActivity : BaseActivity<ActivityQuestionBinding>(R.layout.activity_question) {
 
     // 미션 1. 질문 답하기
-
-    private val viewModel by lazy {
-        ViewModelProvider(
-            this,
-            ViewModelProvider.NewInstanceFactory()
-        )[QuestionViewModel::class.java]
-    }
+    private lateinit var viewModel :QuestionViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

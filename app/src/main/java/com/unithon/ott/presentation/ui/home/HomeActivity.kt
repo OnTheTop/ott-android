@@ -3,6 +3,7 @@ package com.unithon.ott.presentation.ui.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseActivity
@@ -25,8 +26,9 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
         binding.viewModel = viewModel
 
         binding.apply {
-            homeBtnAlbum.setOnClickListener {
-                startActivity(Intent(this@HomeActivity, AlbumActivity::class.java))
+            homeBtnMenu.setOnClickListener {
+                if (homeDl.isDrawerOpen(homeLlDrawer)) homeDl.closeDrawer(homeLlDrawer)
+                else homeDl.openDrawer(homeLlDrawer)
             }
         }
     }
