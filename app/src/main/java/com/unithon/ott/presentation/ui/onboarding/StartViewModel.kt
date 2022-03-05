@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.unithon.ott.data.model.FamilyModel
+import com.unithon.ott.data.remote.response.FamilyMemberResponse
 import com.unithon.ott.data.remote.response.FamilyResponse
 import com.unithon.ott.data.repository.FamilyRepositoryImpl
 import kotlinx.coroutines.launch
@@ -25,6 +26,20 @@ class StartViewModel : ViewModel() {
             Log.d("ViewModel: ", "가족 만들기! : ${response.body()}")
             if (response.isSuccessful) {
                 familyCode.value = response.body()?.familyCode
+            }
+        } catch (e: Exception) {
+            Log.d("Error",e.message.toString())
+        }
+    }
+
+    suspend fun postFamilyMember(){
+        try {
+            val response: Response<FamilyMemberResponse> = familyRepository.postFamilyMember(
+                nickname.value?:"",familyCode.value?:""
+            )
+            Log.d("ViewModel: ", "가족 구성원 가입하기!! : ${response.body()}")
+            if (response.isSuccessful) {
+                
             }
         } catch (e: Exception) {
             Log.d("Error",e.message.toString())

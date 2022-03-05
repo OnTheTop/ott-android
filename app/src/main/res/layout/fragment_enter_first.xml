@@ -37,6 +37,7 @@
             app:layout_goneMarginTop="136dp" />
 
         <EditText
+            android:text="@={viewModel.familyCode}"
             android:id="@+id/enter_first_edt_code"
             android:layout_width="0dp"
             android:layout_height="56dp"
