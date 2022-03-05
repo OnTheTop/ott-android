@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:paddingVertical="3dp"
-            android:text="03.24 (화)"
+            android:text="@{viewModel.date}"
             android:textColor="@color/mono10"
             app:layout_constraintStart_toStartOf="@id/iv_question_bubble"
             app:layout_constraintTop_toTopOf="@id/iv_question_bubble" />
@@ -74,7 +74,7 @@
             app:layout_constraintStart_toStartOf="@id/iv_question_bubble"
             app:layout_constraintTop_toBottomOf="@id/tv_question_guide"
             app:layout_constraintVertical_chainStyle="packed"
-            tools:text="어릴 적 가장 좋아했던 놀이는?" />
+            tools:text="@{viewModel.missionContent}" />
 
 
         <LinearLayout
