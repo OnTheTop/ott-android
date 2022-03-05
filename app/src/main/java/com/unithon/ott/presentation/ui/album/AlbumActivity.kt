@@ -22,5 +22,9 @@ class AlbumActivity : BaseActivity<ActivityAlbumBinding>(R.layout.activity_album
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+
+        binding.apply {
+            albumAppbar.appbarIvBack.setOnClickListener { onBackPressed() }
+        }
     }
 }

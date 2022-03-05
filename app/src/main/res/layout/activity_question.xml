@@ -15,5 +15,14 @@
         android:layout_height="match_parent"
         tools:context=".presentation.ui.question.QuestionActivity">
 
+
+        <include
+            android:id="@+id/question_appbar"
+            layout="@layout/appbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{@string/question_appbar_main_title}" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

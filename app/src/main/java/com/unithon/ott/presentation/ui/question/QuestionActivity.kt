@@ -22,5 +22,10 @@ class QuestionActivity : BaseActivity<ActivityQuestionBinding>(R.layout.activity
 
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
+
+        binding.apply {
+            questionAppbar.appbarIvBack.setOnClickListener { onBackPressed()
+            }
+        }
     }
 }

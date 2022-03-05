@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">ott</string>
     <string name="shared_pref_key">OTT_DB</string>
+
+    <!--    로딩 다이얼로그    -->
     <string name="loading_dialog_message">잠시만 기다려주세요</string>
+
+
+    <!--    가족 사진관    -->
+    <string name="album_appbar_main_title"> 가족 사진관</string>
+
+
+    <!--    질문 미션   -->
+    <string name="question_appbar_main_title">오늘의 질문</string>
+
+
+    <!--    사진 미션   -->
+
 </resources>
