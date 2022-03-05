@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.unithon.ott.presentation.ui.question.QuestionWriteViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+
+        <include
+            android:id="@+id/question_write_appbar"
+            layout="@layout/appbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{viewModel.nickname}"/>
+
+
+        <ImageView
+            android:id="@+id/iv_question_write_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_question_bubble"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/question_write_appbar" />
+
+        <TextView
+            android:id="@+id/tv_question_write_date"
+            style="@style/font_Heading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:paddingVertical="3dp"
+            android:text="03.24 (화)"
+            android:textColor="@color/mono10"
+            app:layout_constraintStart_toStartOf="@id/iv_question_write_bubble"
+            app:layout_constraintTop_toTopOf="@id/iv_question_write_bubble" />
+
+        <TextView
+            android:id="@+id/tv_question_write_guide"
+            style="@style/font_Heading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/question_tv_guide"
+            android:textColor="@color/main_pink"
+            app:layout_constraintBottom_toTopOf="@id/tv_write_question"
+            app:layout_constraintEnd_toEndOf="@id/iv_question_write_bubble"
+            app:layout_constraintStart_toStartOf="@id/iv_question_write_bubble"
+            app:layout_constraintTop_toTopOf="@id/iv_question_write_bubble"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_write_question"
+            style="@style/font_Heading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="33dp"
+            android:gravity="center"
+            android:textColor="@color/mono2"
+            app:layout_constraintBottom_toBottomOf="@id/iv_question_write_bubble"
+            app:layout_constraintEnd_toEndOf="@id/iv_question_write_bubble"
+            app:layout_constraintStart_toStartOf="@id/iv_question_write_bubble"
+            app:layout_constraintTop_toBottomOf="@id/tv_question_write_guide"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="어릴 적 가장 좋아했던 놀이는?" />
+
+        <EditText
+            android:text="@={viewModel.answer}"
+            android:id="@+id/et_question_answer"
+            style="@style/font_small"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/bg_question_answer"
+            android:gravity="top"
+            android:hint="@string/photo_mission_et_comment_hint"
+            android:inputType="textMultiLine"
+            android:maxLength="100"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="25dp"
+            android:textColor="@color/mono10"
+            android:textColorHint="@color/light_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_question_write_bubble"
+            app:layout_constraintBottom_toTopOf="@id/btn_question_ok"/>
+
+        <Button
+            android:id="@+id/btn_question_ok"
+            style="@style/font_Heading6"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/mono1"
+            android:text="@string/btn_finish_answer"
+            android:textColor="@color/mono10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_question_answer" />
+
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

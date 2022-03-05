@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="12dp">
+    android:layout_marginBottom="14dp">
 
     <View
         android:id="@+id/item_question_view"
@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="11dp">
+        android:layout_marginTop="13dp">
 
         <TextView
             style="@style/font_small"
@@ -35,21 +35,13 @@
 
         <TextView
             style="@style/font_small"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:gravity="center"
             tools:text = "아직 답변하지 않았어요!"
             android:textColor="@color/mono10" />
 
-        <TextView
-            style="@style/font_small"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center"
-            tools:text = "0"
-            android:textColor="@color/mono10" />
 
     </LinearLayout>
 

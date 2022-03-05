@@ -101,19 +101,11 @@
                 style="@style/font_small"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="2"
+                android:layout_weight="3"
                 android:gravity="center"
                 android:text="@string/question_tv_content_guide"
                 android:textColor="@color/mono10" />
 
-            <TextView
-                style="@style/font_small"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="좋아요"
-                android:textColor="@color/mono10" />
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

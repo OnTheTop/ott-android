@@ -14,7 +14,8 @@
     <string name="home_tv_today_mission">오늘의 미션</string>
   
     <!-- Button 모음 -->
-    <string name="btn_registration">등록하기</string>
+    <string name="btn_registration">등록하기</string>자
+    <string name="btn_finish_answer">답변 완료하기</string>
 
     <!-- 이미지 접근 메세지 -->
     <string name="photo_appbar_main_title">깜짝 사진 업로드 미션</string>
@@ -40,6 +41,8 @@
     <string name="question_tv_don_look">☠️ 참고 사항 ☠️\n 가족 구성원 모두가 답변을 완료해야만\n열람가능해요!</string>
     <string name="question_tv_content_guide">채팅 내용</string>
     <string name="question_tv_nickname_guide">ID</string>
+    <string name="photo_question_answer_hint">질문의 답변을 입력해주세요.. \n(100 이내)</string>
+
 
 </resources>
 

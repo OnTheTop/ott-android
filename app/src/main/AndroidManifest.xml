@@ -19,21 +19,36 @@
             android:exported="true" />
         <activity
             android:name=".presentation.ui.question.QuestionActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+
+        </activity>
+
+        <activity android:name=".presentation.ui.question.QuestionWriteActivity"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".presentation.ui.album.AlbumActivity"
             android:exported="true" />
         <activity
             android:name=".presentation.ui.home.HomeActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".presentation.ui.photo.PhotoMissionActivity" />
-        <activity android:name=".presentation.ui.MainActivity" android:exported="true" />
+        <activity android:name=".presentation.ui.photo.PhotoMissionActivity"
+            android:exported="true">
+
+        </activity>
+        <activity android:name=".presentation.ui.MainActivity" android:exported="true" >
+
+        </activity>
     </application>
 
 </manifest>
