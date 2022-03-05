@@ -35,7 +35,6 @@ class HistoryActivity : BaseActivity<ActivityHistoryBinding>(R.layout.activity_h
         binding.viewModel = viewModel
 
         CoroutineScope(Dispatchers.IO).launch {
-            Log.d("###","why1")
             viewModel.getMissionList()
         }
 

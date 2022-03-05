@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseFragment
 import com.unithon.ott.databinding.FragmentMissionBinding
@@ -17,7 +18,6 @@ import kotlinx.coroutines.launch
 class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_mission) {
 
 
-
     private val viewModel by lazy { ViewModelProvider(requireActivity()).get(HistoryViewModel::class.java) }
 
 
@@ -27,10 +27,13 @@ class MissionFragment : BaseFragment<FragmentMissionBinding>(R.layout.fragment_m
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
 
-        binding.missionRvMission.adapter = MissionListAdapter { it ->
-            val intent = Intent(requireContext(), QuestionActivity::class.java)
-            intent.putExtra("missionId", it)
-            startActivity(intent)
+        binding.missionRvMission.apply {
+            adapter = MissionListAdapter { it ->
+                val intent = Intent(requireContext(), QuestionActivity::class.java)
+                intent.putExtra("missionId", it)
+                startActivity(intent)
+            }
+            layoutManager = GridLayoutManager(requireContext(), 2)
         }
 
     }
