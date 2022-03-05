@@ -10,6 +10,13 @@ import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseFragment
 import com.unithon.ott.databinding.FragmentStartFourthBinding
 import com.unithon.ott.presentation.ui.home.HomeActivity
+import android.content.ClipData
+import android.content.ClipboardManager
+
+import android.content.Context.CLIPBOARD_SERVICE
+
+
+
 
 class StartFragment4 : BaseFragment<FragmentStartFourthBinding>(R.layout.fragment_start_fourth){
 
@@ -36,6 +43,16 @@ class StartFragment4 : BaseFragment<FragmentStartFourthBinding>(R.layout.fragmen
     private fun initListener() {
         binding.startFourthBtnClose.setOnClickListener {
             startActivity(Intent(context, HomeActivity::class.java))
+        }
+        binding.startFourthBtnCopy.setOnClickListener {
+            val sendIntent: Intent = Intent().apply {
+                action = Intent.ACTION_SEND
+                putExtra(Intent.EXTRA_TEXT, startViewModel.familyCode.value)
+                type = "text/plain"
+            }
+
+            val shareIntent = Intent.createChooser(sendIntent, null)
+            startActivity(shareIntent)
         }
     }
 }
