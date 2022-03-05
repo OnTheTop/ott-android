@@ -29,6 +29,7 @@
 
         <TextView
             android:id="@+id/title"
+            style="@style/font_small"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="16dp"
@@ -37,6 +38,7 @@
             android:layout_marginBottom="70dp"
             android:gravity="center"
             android:text="@{title}"
+            android:textColor="@color/background"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +46,7 @@
 
         <TextView
             android:id="@+id/date"
+            style="@style/font_small"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="14dp"
@@ -51,6 +54,7 @@
             android:layout_marginEnd="108dp"
             android:layout_marginBottom="35dp"
             android:text="@{date}"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
