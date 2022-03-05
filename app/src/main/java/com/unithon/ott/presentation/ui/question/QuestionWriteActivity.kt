@@ -16,13 +16,5 @@ class QuestionWriteActivity : BaseActivity<ActivityWriteQuestionBinding>(R.layou
 
         binding.lifecycleOwner = this
         binding.viewModel = writeViewModel
-
-        writeViewModel.answer.observe(this){
-            Log.d("찍혀라",it)
-        }
-
-        writeViewModel.nickname.observe(this){
-            showToast(it)
-        }
     }
 }

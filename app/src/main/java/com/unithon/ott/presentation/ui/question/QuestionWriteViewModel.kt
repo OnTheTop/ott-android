@@ -5,10 +5,7 @@ import androidx.lifecycle.ViewModel
 
 class QuestionWriteViewModel : ViewModel() {
 
-    var nickname : MutableLiveData<String> = MutableLiveData()
+    var nickname : String = "getNickName()"
     var answer : MutableLiveData<String> = MutableLiveData()
 
-    init {
-        nickname.value = "로컬에서 가져올 예정"
-    }
 }
