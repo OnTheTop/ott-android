@@ -8,7 +8,7 @@ import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
     private const val TIMEOUT_COUNT: Long = 10
-    private const val BASE_URL =""
+    private const val BASE_URL ="http://3.36.84.241:3000"
 
     fun getClient(): Retrofit {
         val baseInterceptor = Interceptor { chain ->

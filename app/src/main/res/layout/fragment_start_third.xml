@@ -37,6 +37,7 @@
             app:layout_goneMarginTop="136dp" />
 
         <EditText
+            android:text="@={viewModel.nickname}"
             android:id="@+id/start_third_edt_nickname"
             style="@style/font_Heading6"
             android:layout_width="0dp"
@@ -50,7 +51,8 @@
             android:textColorHint="@color/light_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/start_third_tv_title" />
+            app:layout_constraintTop_toBottomOf="@id/start_third_tv_title"
+            android:inputType="text" />
 
         <TextView
             android:id="@+id/start_third_tv_hint"
