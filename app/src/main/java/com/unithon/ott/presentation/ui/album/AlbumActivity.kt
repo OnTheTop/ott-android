@@ -9,7 +9,6 @@ import com.unithon.ott.databinding.ActivityAlbumBinding
 class AlbumActivity : BaseActivity<ActivityAlbumBinding>(R.layout.activity_album) {
 
     // 가족 사진관
-
     private val viewModel by lazy {
         ViewModelProvider(
             this,
