@@ -3,6 +3,8 @@ package com.unithon.ott.presentation.ui.home
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
 import com.unithon.ott.R
@@ -26,6 +28,14 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
+
+        // 삐삐 상태
+        if (viewModel.isFirst == true) { isFirst() }
+        else if (viewModel.isToday == true) { isDone() }
+        else { notDone() }
+
+
+
         binding.apply {
             homeBtnMenu.setOnClickListener {
                 if (homeDl.isDrawerOpen(homeLlDrawer)) homeDl.closeDrawer(homeLlDrawer)
@@ -36,4 +46,20 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
             }
         }
     }
+
+    private fun isFirst() {
+        binding.homeTvGreeting.text = getString(R.string.home_tv_first_greeting)
+        binding.homeTvIntro.text = getString(R.string.home_tv_first_intro)
+    }
+
+    private fun isDone() {
+        binding.homeTvGreeting.text = getString(R.string.home_tv_done_greeting)
+        binding.homeTvIntro.text = getString(R.string.home_tv_intro)
+    }
+
+    private fun notDone() {
+        binding.homeTvGreeting.text = getString(R.string.home_tv_greeting)
+        binding.homeTvIntro.text = getString(R.string.home_tv_intro)
+    }
+
 }
