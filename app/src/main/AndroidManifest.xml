@@ -44,11 +44,6 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".presentation.ui.photo.PhotoMissionActivity"
-            android:exported="true">
-        </activity>
-        <activity android:name=".presentation.ui.MainActivity" android:exported="true" >
-        </activity>
 
     </application>
 
