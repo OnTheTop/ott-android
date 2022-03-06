@@ -1,6 +1,7 @@
 package com.unithon.ott.domain.repository
 
 import com.unithon.ott.data.remote.response.MissionListResponse
+import com.unithon.ott.data.remote.response.CurMissionResponse
 import retrofit2.Response
 
 interface MissionRepository {
@@ -10,8 +11,9 @@ interface MissionRepository {
     fun getIsToday(): Boolean?
     fun setIsToday(isToday: Boolean)
 
-    fun getMission(): Int?
-    fun setMission(mission: Int)
+    fun getMissionId(): Int?
+    fun setMissionId(mission: Int)
 
-    suspend fun getMissionList(familyId:Int):Response<MissionListResponse>
+    suspend fun getMissionList(familyId: Int): Response<MissionListResponse>
+    suspend fun getMission(missionId: Int, familyId: Int): Response<CurMissionResponse>
 }

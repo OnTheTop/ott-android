@@ -31,8 +31,9 @@
     <string name="history_tab_mission">미션모음</string>
     <string name="history_tab_album">가족사진</string>
 
+
     <!-- Button 모음 -->
-    <string name="btn_registration">등록하기</string>자
+    <string name="btn_registration">등록하기</string>
     <string name="btn_finish_answer">답변 완료하기</string>
 
     <!-- 이미지 접근 메세지 -->

@@ -1,18 +1,16 @@
 package com.unithon.ott.presentation.ui.home
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.unithon.ott.R
 import com.unithon.ott.common.base.BaseActivity
 import com.unithon.ott.databinding.ActivityHomeBinding
-import com.unithon.ott.presentation.ui.album.AlbumActivity
 import com.unithon.ott.presentation.ui.history.HistoryActivity
+import com.unithon.ott.presentation.ui.photo.PhotoMissionActivity
 import com.unithon.ott.presentation.ui.question.QuestionActivity
+import kotlinx.coroutines.launch
 
 class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
 
@@ -29,11 +27,26 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
 
+        viewModel.type.observe(this) { type ->
+            if (type == "질문") {
+                val intent = Intent(this, QuestionActivity::class.java)
+                intent.putExtra("missionId", viewModel.missionId + 1)
+                startActivity(intent)
+
+            } else {
+                startActivity(Intent(this, PhotoMissionActivity::class.java))
+            }
+
+        }
 
         // 삐삐 상태
-        if (viewModel.isFirst == true) { isFirst() }
-        else if (viewModel.isToday == true) { isDone() }
-        else { notDone() }
+        if (viewModel.isFirst == true) {
+            isFirst()
+        } else if (viewModel.isToday == true) {
+            isDone()
+        } else {
+            notDone()
+        }
 
         binding.apply {
             homeBtnMenu.setOnClickListener {
@@ -43,8 +56,10 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>(R.layout.activity_home) {
             homeBtnHistory.setOnClickListener {
                 startActivity(Intent(this@HomeActivity, HistoryActivity::class.java))
             }
-            homeBbibbi.bbibbiCl.setOnClickListener {
-
+            homeFirstBbibbi.setOnClickListener {
+                lifecycleScope.launch {
+                    viewModel?.getMissionId()
+                }
             }
         }
     }
